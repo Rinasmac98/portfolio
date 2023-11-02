@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+/* common */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+h2 {
+  margin-left: 60px;
+  margin-top: 60px;
+  font-size: 2.2rem;
+}
+
+img {
+  width: 100%;
+}
+
+/* main visual */
+.mainVisual {
+  display: flex;
+}
+
+.mainLeft, .mainRight {
+  display: flex;
+  flex-flow: column;
+  width: 35%;
+  margin-bottom: 80px;
+}
+
+.mainVisual h1 {
+  width: 30%;
+  text-align: center;
+  font-size: 5rem;
+}
+
+.mainImage1, .mainImage2, .mainImage3, .mainImage4 {
+  opacity: 0;
+  bottom: -15px;
+  transition: 1s;
+}
+
+.fadeIn {
+  opacity: 1;
+  bottom: 0;
+}
+
+/* header */
+.nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 18rem;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  border-top: solid 1px #555555;
+  border-bottom: solid 1px #555555;
+  background-color: #FFFFFF;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555555;
+}
+
+/* product */
+#productContent {
+  background-color: #f4ebdb;
+  padding: 40px;
+}
+
+.productTitle {
+  margin-top: 80px;
+  padding-top: 60px;
+}
+
+.productWrapper {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.productNum {
+  text-align: end;
+  font-size: 0.8rem;
+}
+
+/* store */
+.store {
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 1px #555555;
+  margin-bottom: 60px;
+}
+
+.storeName {
+  margin-right: 30rem;
+}
+
+/* footer */
+footer {
+  text-align: right;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  margin-top: 80px;
+  background-color: #f4ebdb;
+}
+
+footer p {
+  margin: 0;
+}
+
+small {
+  display: flex;
+  justify-content: center;
+}
+
+/* responsive */
+@media(max-width: 1200px){
+  html {
+    font-size: 80%;
+  }
+  .nav {
+    gap: 16rem;
+  }
+}
+
+@media(max-width: 820px){
+  html {
+    font-size: 60%;
+  }
+  .nav {
+    gap: 14rem;
+  }
+}
+
+@media(max-width: 560px){
+  html {
+    font-size: 40%;
+  }
+  .nav {
+    gap: 12rem;
+  }
+}
+@media(max-width: 425px){
+  html {
+    font-size: 36%;
+  }
+  .productTitle {
+    padding-top: 20px;
+  }
+}

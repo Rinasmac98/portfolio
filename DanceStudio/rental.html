@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DANCE</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+  <!-- header -->
+  <nav class="navbar navbar-expand-lg nav">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">TOP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="rental.html">RENTAL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#event">EVENT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- rental -->
+  <!-- rental table -->
+  <div class="rentalWrapper">
+    <h2 class="rental">RENTAL</h2>
+    <div class="rentalTable">
+      <table>
+        <tr>
+          <th>6:00 ~ 12:00</th>
+          <td>1200円/h</td>
+        </tr>
+        <tr>
+          <th>12:00 ~ 18:00</th>
+          <td>2000円/h</td>
+        </tr>
+        <tr>
+          <th>18:00 ~ 24:00</th>
+          <td>2500円/h</td>
+        </tr>
+        <tr>
+          <th>24:00 ~ 6:00</th>
+          <td>1000円/h</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- calculation -->
+    <div class="rentalCalc">
+      <select class="form-select" id="time" aria-label="Default select example">
+        <option selected>時間帯の選択</option>
+        <option value="6-12">6:00 ~ 12:00</option>
+        <option value="12-18">12:00 ~ 18:00</option>
+        <option value="18-24">18:00 ~ 24:00</option>
+        <option value="24-6">24:00 ~ 6:00</option>
+      </select>
+
+      <select class="form-select" id="hour" aria-label="Default select example">
+        <option selected>利用時間</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+
+      <button class="calcButton" id="calc">利用料金</button>
+    </div>
+
+    <div class="calcResult">
+      <input class="form-control result mb-5" id="result" type="text" value="合計金額" aria-label="readonly input example" readonly>
+    </div>
+
+    <!-- form -->
+    <h3>予約フォーム</h3>
+
+    <div class="form">
+      <div class="row mb-5 name" id="yourName">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="姓" aria-label="First name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="名" aria-label="Last name">
+        </div>
+      </div>
+      <div class="input-group mt-3 mb-3 email" id="email">
+        <input type="text" class="form-control" placeholder="e-mail" aria-label="Username">
+        <span class="input-group-text">@</span>
+        <input type="text" class="form-control" placeholder="" aria-label="Server">
+      </div>
+    </div>
+
+    <div class="resultButton">
+      <button id="reserve">予約</button>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <p>DANCE : 000-0000-000</p>
+    <small>&copy;Rina Fukutome</small>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
